@@ -1,0 +1,12 @@
+version: '3.7'
+services:
+    bottle:
+        build: .
+        ports:
+            - "5000:5000"
+        volumes:
+            - .:/app
+    memcached:
+        image: memcached:alpine
+        ports:
+            - "11211:11211"
